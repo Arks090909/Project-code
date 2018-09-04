@@ -57,7 +57,7 @@
 				
 			  </div>
 			<div>
-			<ul class="linking">
+			<ul class="linking" id="starwar">
 				<li class="sam"><a href="#">OVERVIEW</a></li>
 					<li class="sam"><a href="#">LOGS</a></li>
 						<li class="sam"><a href="#">DEPLOYMENTS</a></li>
@@ -67,6 +67,7 @@
             </div>
         </div>
     </div>
+   
           <div class="wrap">
 			     		<button class="accordian is-open">
 							<div class="stage1">
@@ -213,22 +214,12 @@
 										<b>2min 35s</b>
 					     			</div>
 				      			</div>
-				      			<button class="prev" onclick="previous()">&#10094;</button>
-				      			<button class="next" onclick="fnext()">&#10095;</button>
-				      			
+				      			<button class="prev" type="button" >&#10094;</button>
+				      			<button class="next" type="button">&#10095;</button>
+				      			</div>
 							</div>
 						</div>
-					</div>
-					<script>
-						var show=0;
-						function fnext(){
-							show+= -20%;
-							document.getElementById('color').style.tramsform="translateX("+show+")";
-						}
-
-
-
-					</script>
+					
 							<div class="stage3">
 								<div class="italic">Deployment Approved
 								</div>
@@ -246,7 +237,7 @@
 			</button>
 			<div class="display-container">
 				<div class="scrollingtable">
-					<table class="sc">
+					<table class="sc" id="mychoice">
 						<tr>
 							<th>NAME</th>
 							<th>COMMIT DETAILS</th>
@@ -261,8 +252,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="red">Failed</td>
-						    <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						    <td class="hot-pink">Retry
+                            <div class="popuptext" >Are you sure?
                             <div>
                             	<pre><input type="radio" name="value">Yes <input type="radio" name="value">No</pre>
                             </div>
@@ -278,8 +269,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="red">Failed</td>
-						    <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						    <td class="hot-pink">Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio">Yes <input type="radio">No</pre>
                             </div>
@@ -294,8 +285,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="red">Failed</td>
-						    <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						    <td class="hot-pink">Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio">Yes <input type="radio">No</pre>
                             </div>
@@ -310,8 +301,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="green">Deployed</td>
-						   <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						   <td class="hot-pink">Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio" name="value">Yes <input type="radio" name="value">No</pre>
                             </div>
@@ -326,8 +317,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="green">Deployed</td>
-						    <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						    <td class="hot-pink">Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio">Yes <input type="radio">No</pre>
                             </div>
@@ -342,8 +333,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="green">Deployed</td>
-						    <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						    <td class="hot-pink">Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio">Yes <input type="radio">No</pre>
                             </div>
@@ -358,15 +349,14 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="green">Deployed</td>
-						   <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						   <td class="hot-pink" >Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio">Yes <input type="radio">No</pre>
                             </div>
                              
-                            </div>
-
-						    </td>	
+                         </div>
+                            </td>	
 						</tr>	
 						<tr>
 						    <td class="pink">Test Deployment</td>
@@ -374,8 +364,8 @@
 						    <td class="black">9909-23-1234</td>
 						    <td class="black">10-10-17, 11:59:59</td>
 						    <td class="green">Deployed</td>
-						    <td class="hot-pink" onclick="popuspsfunction(this)">Retry
-                            <div class="popuptext" id="myPopup">Are you sure?
+						    <td class="hot-pink">Retry
+                            <div class="popuptext">Are you sure?
                             <div>
                             	<pre><input type="radio">Yes <input type="radio">No</pre>
                             </div>
@@ -387,12 +377,7 @@
 
 
 					</table>	
-					<script>
-						 function popuspsfunction(el){
-                  var ele=el.getElementsByClassName("popuptext");
-                  var x=ele.closest("#myPopup");
-                    x.classList.toggle("show");
-					</script>			
+							
 	</div>
 </div>
 			
@@ -470,6 +455,7 @@
            </div>
 
 		</div>
+		
 		<script type="text/javascript" src=".\js\t..mobile.js"></script>
 </body>
 
